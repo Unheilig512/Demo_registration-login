@@ -39,7 +39,7 @@ public class AuthController {
         String fingerPrint = loginRequest.getFingerprint();
         String username = loginRequest.getUsername();
 
-        if (loginAttemptService.isBlocked(fingerPrint, username)) {
+        if (loginAttemptService.isBlocked(username, fingerPrint)) {
             return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Слишком много неуданых попыток входа. Попробуйте позже.");
         }
 
