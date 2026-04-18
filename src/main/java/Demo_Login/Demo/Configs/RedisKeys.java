@@ -8,12 +8,12 @@ public class RedisKeys {
     private static final String LOGIN_ATTEMPTS_KEY_PREFIX = "login_attempts:";
     private static final String UNIQUE_CODE_KEY_PREFIX = "unique_code:";
 
-    @Bean
-    public String getLoginAttemptsKeyPrefix(){
+
+    public static String getLoginAttemptsKeyPrefix(){
         return LOGIN_ATTEMPTS_KEY_PREFIX;
     }
-    @Bean
-    public String getUniqueCodeKeyPrefix(){
+
+    public static String getUniqueCodeKeyPrefix(){
         return UNIQUE_CODE_KEY_PREFIX;
     }
 }
